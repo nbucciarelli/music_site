@@ -1,0 +1,140 @@
+@mixin container
+  margin-left: auto
+  margin-right: auto
+  width: 960px
+
+@mixin grid($columns)
+  display: inline
+  float: left
+  position: relative
+  padding-left: 10px
+  padding-right: 10px
+  width: (960 / 12 * $columns) - 20 + px
+
+@mixin inline_nav
+  ul
+    margin: 2px 0
+    padding: 0 18px
+    li
+      margin: 0 4px
+      display: inline
+
+@mixin vertical_nav
+  ul
+    margin: 2px 0
+    padding: 0
+    list-style: none
+    li
+      margin: 0
+      padding: 4px 0
+
+body
+  font-size: .9em
+
+@mixin show_grid($color)
+  border: solid 1px $color
+  border-width: 1px 0 1px 0
+  border: 0
+  
+.clear
+  clear: both
+  display: block
+  overflow: hidden
+  visibility: hidden
+  width: 0
+  height: 0
+
+#header
+  @include container
+  @include show_grid(#ff0000)
+  position: relative
+  margin-bottom: 4px
+  #logo
+    @include grid(7)
+    @include show_grid(red)
+    h1
+      padding-left: 12px
+      font-size: 2em
+      font-family: monospace
+  #user_box
+    @include grid(5)
+    @include inline_nav
+    @include show_grid(#ff0000)
+    position: relative
+    top: 0
+    border-top: solid 1px #999
+    border-bottom: solid 1px #999
+    background-color: #eee
+    margin-top: 4px
+    margin-bottom: 2px
+    padding-top: 4px
+    padding-bottom: 4px
+    font-size: .95em
+    font-weight: bold
+    text-align: center
+    float: right
+    padding-left: 0
+    padding-right: 0
+  #search
+    @include grid(5)
+    @include show_grid(#ff0000)
+    bottom: 0
+    margin: 40px 0 0 0
+    text-align: right
+
+#nav
+  @include container
+  @include inline_nav
+  position: relative
+  @include show_grid(#ff0000)
+  border-top: solid 1px #999
+  border-bottom: solid 1px #999
+  background-color: #eee
+  margin-top: 0
+  margin-bottom: 4px
+  padding-top: 8px
+  padding-bottom: 4px
+  font-size: .95em
+  font-weight: bold
+  a
+    text-decoration: none
+
+#flash
+  @include container
+  #flash_inner
+    text-align: center
+    padding: 8px 18px
+
+#content
+  @include container
+  #main
+    @include grid(8)
+    @include show_grid(#ff0000)
+    margin-bottom: 30px
+    #main_inner
+      min-height: 360px
+      padding: 0 16px
+  #sidebar
+    @include grid(4)
+    @include show_grid(#ff0000)
+    @include vertical_nav
+    a
+      text-decoration: none
+    #sidebar_inner
+      min-height: 180px
+      border-left: solid 1px #999
+      padding-left: 14px
+
+#footer
+  @include container
+  @include inline_nav
+  @include show_grid(#ff0000)
+  text-align: left
+  padding-top: 6px
+  border-top: solid 1px #999
+  
+a
+  color: #333
+  
+a img
+  border: none
