@@ -11,8 +11,9 @@
     #header
       = render :partial => 'shared/header'
     .clear
-    #nav
-      = render :partial => 'shared/nav'
+    - if user_signed_in?
+      #nav
+        = render :partial => 'shared/nav'
     #flash
       #flash_inner
         .notice
@@ -24,9 +25,11 @@
       #main
         #main_inner
           = yield
-      #sidebar
-        #sidebar_inner
-          = render :partial => 'shared/sidebar'
-      .clear
-    #footer
-      = render :partial => 'shared/footer'
+        #footer
+          = render :partial => 'shared/footer'  
+
+      - if user_signed_in?
+        #sidebar
+          #sidebar_inner
+            = render :partial => 'shared/sidebar'
+        .clear
