@@ -20,7 +20,7 @@ class SongsController < ApplicationController
   end
   
   def create
-    @song = Song.new(params[:song])
+    @song = current_user.songs.build(params[:song])
     if @song.save
       flash[:notice] = "Successfully created a new song."
       respond_with @song, :location => songs_path

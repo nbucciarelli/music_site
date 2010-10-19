@@ -4,7 +4,7 @@
     %title Music Site
     - [ '960', 'smoothness/jquery-ui-1.8.custom', 'application'].each do |css|
       %link{ :href => "/stylesheets/#{css}.css", :rel => 'stylesheet', :type => 'text/css', :media =>'screen', :charset => 'utf-8'}
-    - ['jquery-1.4.2.min', 'jquery-ui-1.8.custom.min', 'rails', 'application'].each do |js|
+    - ['rails', 'jquery-1.4.2.min', 'jquery-ui-1.8.custom.min', 'application'].each do |js|
       %script{:src => "/javascripts/#{js}.js", :type => 'text/javascript'}
     = csrf_meta_tag
   %body
