@@ -1,0 +1,10 @@
+%li{ :id => "song_#{ song.id }"}
+  Name:
+  = link_to "#{song.name}", song_path(song)
+  %br
+  = "Description: #{song.description}"
+  %br
+  = link_to 'Edit', edit_song_path(song)
+  = "/"
+  = link_to 'Delete', song_path(song), :method => 'DELETE', :confirm => "Are you sure you want to delete #{song.name}"
+  

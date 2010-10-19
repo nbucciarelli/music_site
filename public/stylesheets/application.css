@@ -159,3 +159,14 @@ a {
 
 a img {
   border: none; }
+
+a.cancel_link {
+  color: red; }
+
+fieldset {
+  border: solid 1px #eeeeee;
+  margin-bottom: 12px; }
+
+legend {
+  font-weight: bold;
+  padding: 0 8px; }

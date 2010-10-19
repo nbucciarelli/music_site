@@ -1,0 +1,13 @@
+
+#songs
+  %h3
+    Songs
+  %p
+    = link_to 'Add a song', new_song_path
+    - unless @songs.empty?
+      %ul
+        = render :partial => 'song', :collection => @songs
+    - else
+      %p
+        %em
+          No songs.
