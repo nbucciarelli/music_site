@@ -1,0 +1,53 @@
+
+# GIT PROCESS
+
+1. Create Branch
+
+    git branch [Branch Description]
+    
+2. Checkout Branch
+
+    git checkout [Branch Description]
+    
+3. [Make Changes ]
+
+4. Add changes
+    git add .
+
+5. Commit
+    git commit -am [description]
+
+6. Push Branch to Remote Repository
+
+    git push origin [Branch Description]
+
+7. Tag your working branch
+
+    git tag fixed_[Branch Description]
+
+7.5 Push Tags
+    git push --tags
+
+8. Pull latest master into your branch and resolve and conflicts
+
+    git pull origin master
+    
+9. Push any resolve conflicts back to remote repository
+
+    git push origin [Branch Description]
+    
+10. Checkout Master
+
+    git checkout master
+    
+11. Merge you branch into master
+
+    git merge [Branch Description]
+
+12. Pull from master
+    git pull origin master 
+
+13. Push changes to master
+    git push origin master
+
+Your Done!
