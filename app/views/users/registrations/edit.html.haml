@@ -1,7 +1,11 @@
-%h2 Sign up
+%h2 Edit user information
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = devise_error_messages!
   %fieldset
+    %p
+      = f.label :username
+      %br/
+      = f.text_field :username
     %p
       = f.label :email
       %br/
