@@ -35,5 +35,6 @@ Voting - requires:
 
 
 Implemented
-User CRUD
+User authentication
+  Devise
 Song CRUD
