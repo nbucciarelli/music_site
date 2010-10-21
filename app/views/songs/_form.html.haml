@@ -11,6 +11,10 @@
       = f.label :description
       %br
       = f.text_area :description, :value => @song.new_record? ? '' : @song.description
+    %p
+      = f.label :genre
+      %br
+      = f.select :genre, Song::GENRES, :prompt => "Select a genre"
   %p
     = f.submit
     or

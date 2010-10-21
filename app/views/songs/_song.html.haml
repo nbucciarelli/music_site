@@ -4,6 +4,8 @@
   %br
   = "Description: #{song.description}"
   %br
+  = "Genre: #{song.genre}"
+  %br
   = link_to 'Edit', edit_song_path(song)
   = "/"
   = link_to 'Delete', song_path(song), :method => 'delete', :confirm => "Are you sure you want to delete #{song.name}"

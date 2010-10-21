@@ -5,7 +5,7 @@ class AddVotesToSongs < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :songs, :upvote_count, :integer
-    remove_column :songs, :downvote_count, :integer
+    remove_column :songs, :upvote_count
+    remove_column :songs, :downvote_count
   end
 end
