@@ -1,0 +1,39 @@
+NYI
+Voting - requires:
+  Songs on frontpage
+  Seeded user database (so that we have people to vote)
+  Make a few songs with random users, no real need to seed
+  Implementation:
+    Songs have upvote_count and downvote_count
+    upvote_count - downvote_count yields the vote count
+      !This can be negative!
+        Do we want to cap at zero?
+        Do we want to keep track and make songs dig themselves out of the hole and not display their vote count?
+        Do we want to just display negative numbers?
+        Should songs be pruned when they get to a certain negative vote count?
+        Should you not be allowed to downvote a song that is already at zero, but still be able to upvote?
+      Songs have an array for users_voted
+        When a user votes, up or down, their id is stored in the array
+        Application checks against this array to prevent double voting
+        !If implemented in this fashion there are no take-backs, you only get one vote up or down and can't change it!
+      Users have arrays for songs_upvoted and songs_downvoted
+        When a user votes either way it is stored in their database so that the list can be viewed on the users profile page
+      So as a process:
+        User goes to main page and views songs list
+        User clicks upvote arrow on "Song 1"
+        Application logs current_user.id (built into devise methinks?  Have used before.) and inserts into the songs users_voted array
+        Application increases songs upvote_count by 1
+        Application logs the id of "Song 1" and inserts it into the users upvoted_songs array
+        Application checks upvote_count compared to downvote_count to find the number of votes
+        Application compares "Song 1"'s vote count against the other songs in the database to see if it has moved up or down on the rankings
+        Application renders the change to the number of votes that the user sees (via ajax at some point)
+        Application does not render change in standings on the page (as it is extremely unlikely that a single users vote will actually move it up or down the list, a page refresh will take into account all the votes of all the users and be more useful (so the user just refreshes the page when they want to see this, not us (or they just see it when they navagate away then back to the page)))
+
+
+
+
+
+
+Implemented
+User CRUD
+Song CRUD
