@@ -1,7 +1,8 @@
 %h1
   Content
-%ul
+%ul.songlist
   = render :partial => '/shared/song', :collection => @songs
+  
   
 %p
   = will_paginate @songs
