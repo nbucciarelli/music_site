@@ -71,6 +71,7 @@ GEM
     tzinfo (0.3.23)
     warden (0.10.7)
       rack (>= 1.0.0)
+    will_paginate (3.0.pre2)
     workflow (0.7.0)
 
 PLATFORMS
@@ -81,4 +82,5 @@ DEPENDENCIES
   haml (= 3.0.18)
   mysql2 (= 0.2.3)
   rails (= 3.0.0)
+  will_paginate (>= 3.0.pre)
   workflow (~> 0.7.0)
