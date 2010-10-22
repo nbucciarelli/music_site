@@ -6,7 +6,7 @@ class SongsController < ApplicationController
   respond_to :html, :json
   
   def index
-    @songs = Song.all
+    @songs = current_user.songs
     respond_with @songs
   end
   
