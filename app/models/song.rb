@@ -13,5 +13,26 @@ class Song < ActiveRecord::Base
     self.downvote_count = 0
     self.upvote_count = 0
   end
+  
+  def upvote(user)
+    unless self.users_upvoted.include?(user.id) || self.users_downvoted.include?(user.id)
+      self.users_upvoted << user.id
+      self.upvote_count += 1
+      true
+    else
+      false
+    end
+    
+  end
+  
+  def downvote(user)
+    unless self.users_upvoted.include?(user.id) || self.users_downvoted.include?(user.id)
+      self.users_downvoted << user.id
+      self.downvote_count += 1
+      true
+    else
+      false
+    end
+  end
 
 end

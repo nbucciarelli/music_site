@@ -50,12 +50,22 @@ class SongsController < ApplicationController
   end
   
   def user_upvote
-    @song.users_upvoted << current_user
+    if @song.upvote(current_user)
+      @song.save
+      flash[:notice] = "Successfully voted for '#{@song.name}'."
+    else
+      flash[:alert] = "You have already voted for '#{@song.name}'."
+    end
     respond_with @song, :location => songs_path
   end
 
-  def user_downvote
-    @song.users_downvoted << current_user
+  def user_downvote    
+    if @song.downvote(current_user)
+      @song.save
+      flash[:notice] = "Successfully voted for '#{@song.name}'."
+    else
+      flash[:alert] = "You have already voted for this '#{@song.name}'."
+    end
     respond_with @song, :location => songs_path
   end
   
