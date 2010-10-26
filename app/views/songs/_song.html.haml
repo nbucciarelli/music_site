@@ -1,7 +1,7 @@
 %li{ :id => "song_#{ song.id }"}
-  = link_to 'Up', user_upvoted_song_path(song)
+  = link_to 'Up', user_upvote_song_path(song), :method => :post
   %br
-  = link_to 'Down', user_downvoted_song_path(song)
+  = link_to 'Down', user_downvote_song_path(song), :method => :post
   %br
 
   Name:
