@@ -37,6 +37,7 @@ GEM
       warden (~> 0.10.7)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    faker (0.3.1)
     haml (3.0.18)
     i18n (0.4.1)
     mail (2.2.6.1)
@@ -79,6 +80,7 @@ PLATFORMS
 
 DEPENDENCIES
   devise (= 1.1.2)
+  faker (~> 0.3.1)
   haml (= 3.0.18)
   mysql2 (= 0.2.3)
   rails (= 3.0.0)

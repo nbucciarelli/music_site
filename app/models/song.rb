@@ -3,4 +3,7 @@ class Song < ActiveRecord::Base
   
   GENRES = ["Rock", "Rap", "Punk", "Disco", "Hip Hop"]
   
+  serialize :users_up_voted
+  serialize :users_down_voted
+
 end

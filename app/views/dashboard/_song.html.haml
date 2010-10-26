@@ -1,5 +1,8 @@
 #song_container
   #voting
+    = link_to 'Up', user_upvoted_song_path(song)
+    %br
+    = link_to 'Down', user_downvoted_song_path(song)
 
   #song_info
     %li{ :id => "song_#{ song.id }"}
@@ -10,4 +13,11 @@
       %br
       = "Description: #{song.description}"
       %br
+      Upvoted:
+      = song.upvote_count.to_i
+      %br
+      Downvoted:
+      = song.downvote_count.to_i
+
   .clear
+

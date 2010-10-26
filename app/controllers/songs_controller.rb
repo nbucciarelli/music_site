@@ -49,6 +49,16 @@ class SongsController < ApplicationController
     respond_with @song
   end
   
+  def user_upvoted
+    @song.users_upvoted << current_user
+    respond_with @song, :location => songs_path
+  end
+
+  def user_downvoted
+    @song.users_downvoted << current_user
+    respond_with @song, :location => songs_path
+  end
+  
 private
   def find_song
     @song = Song.find(params[:id])

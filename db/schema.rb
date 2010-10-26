@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101021193518) do
+ActiveRecord::Schema.define(:version => 20101026004014) do
 
   create_table "songs", :force => true do |t|
     t.integer  "user_id"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20101021193518) do
     t.integer  "upvote_count"
     t.integer  "downvote_count"
     t.string   "genre"
+    t.text     "users_upvoted"
+    t.text     "users_downvoted"
   end
 
   create_table "users", :force => true do |t|
@@ -38,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20101021193518) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
+    t.text     "songs_upvoted"
+    t.text     "songs_downvoted"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
