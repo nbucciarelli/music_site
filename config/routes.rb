@@ -3,12 +3,11 @@ MusicSite::Application.routes.draw do
 
   # devise_for :admins, :controllers => { :sessions => "admins/sessions" }
   
-  resources :songs do
-    member do
-      put :user_upvoted
-      put :user_downvoted
-    end
-  end
+  resources :songs
+  
+  match '/songs/:id/user_up_voted', :to => 'songs#user_upvoted', :as => 'user_upvoted'
+  
+  match '/songs/:id/user_down_voted', :to => 'songs#user_downvoted', :as => 'user_downvoted'
   
   # match '/songs/new', :to => 'songs#new', :as => :new_song
 

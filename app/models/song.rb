@@ -6,4 +6,8 @@ class Song < ActiveRecord::Base
   serialize :users_up_voted
   serialize :users_down_voted
 
+  def user_upvoted
+    Song.users_up_voted << current_user
+  end
+
 end

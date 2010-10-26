@@ -50,12 +50,12 @@ class SongsController < ApplicationController
   end
   
   def user_upvoted
-    @song.users_upvoted << current_user
+    @song.users_up_voted << current_user
     respond_with @song, :location => songs_path
   end
 
   def user_downvoted
-    @song.users_downvoted << current_user
+    @song.users_down_voted << current_user
     respond_with @song, :location => songs_path
   end
   
