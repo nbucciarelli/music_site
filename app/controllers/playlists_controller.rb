@@ -9,8 +9,8 @@ class PlaylistsController < ApplicationController
   end
   
   def show
-    respond_with @playlist
     @songs = Playlist.songs_in(@playlist)
+    respond_with @playlist
   end
   
   def new

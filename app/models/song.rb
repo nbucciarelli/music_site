@@ -1,6 +1,6 @@
 class Song < ActiveRecord::Base
   belongs_to :user
-
+  
   before_create :set_vote_defaults
   
   GENRES = ["Rock", "Rap", "Punk", "Disco", "Hip Hop"]

@@ -5,15 +5,14 @@ class Playlist < ActiveRecord::Base
   before_create :set_song_defaults
   
   serialize :song_ids
-  
-
-  
+    
   def set_song_defaults
     self.song_ids = ['']
   end
   
   def self.songs_in(playlist)
     songs = []
+    puts playlist.inspect
     if playlist.song_ids
       playlist.song_ids.each do |playlist_song|
         songs << Song.find(playlist_song)
