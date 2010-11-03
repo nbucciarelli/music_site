@@ -6,7 +6,7 @@ class Playlist < ActiveRecord::Base
   
   serialize :song_ids
   
-  has_many :songs
+
   
   def set_song_defaults
     self.song_ids = ['']
