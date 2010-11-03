@@ -193,3 +193,22 @@ ul.songlist {
   width: 475px;
   position: relative;
   float: right; }
+
+/* STYLES FOR PLAYLIST LIST */
+ul.playlist_list {
+  list-style: none; }
+
+#playlist_container {
+  border-top: 2px dotted #cccccc;
+  margin: 5px;
+  padding: 2px;
+  position: relative; }
+
+#p_l_container {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 2px; }
+
+#p_form_container {
+  border: 1px solid black;
+  margin: 0px; }

@@ -56,7 +56,7 @@ class SongsController < ApplicationController
     else
       flash[:alert] = "You have already voted for '#{@song.name}'."
     end
-    respond_with @song, :location => songs_path
+    respond_with @song, :location => root_path
   end
 
   def user_downvote    
@@ -66,7 +66,7 @@ class SongsController < ApplicationController
     else
       flash[:alert] = "You have already voted for this '#{@song.name}'."
     end
-    respond_with @song, :location => songs_path
+    respond_with @song, :location => root_path
   end
   
 private

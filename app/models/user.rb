@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me
   
   has_many :songs, :dependent => :destroy
+  has_many :playlists, :dependent => :destroy
   
   serialize :songs_up_voted
   serialize :songs_down_voted

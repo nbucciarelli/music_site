@@ -2,6 +2,8 @@
   #voting
     = link_to 'Up', user_upvote_song_path(song), :method => :post
     %br
+    = "#{song.upvote_count - song.downvote_count}"
+    %br
     = link_to 'Down', user_downvote_song_path(song), :method => :post
 
   #song_info

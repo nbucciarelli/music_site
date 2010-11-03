@@ -10,6 +10,8 @@ MusicSite::Application.routes.draw do
     end
   end
   
+  resources :playlists
+  
   # match '/songs/:id/user_upvote', :to => 'songs#user_upvote', :as => 'user_upvote', :via => 'post'
   
   # match '/songs/:id/user_downvote', :to => 'songs#user_downvote', :as => 'user_downvote', :via => 'post'

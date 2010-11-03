@@ -1,0 +1,8 @@
+#playlist_container
+  #playlist_info
+    %li{ :id => "playlist_#{ playlist.id }"}
+      = link_to("#{playlist.playlist_title}", playlist_path(playlist))
+      %br
+      = "#{playlist.playlist_description}"
+    
+  .clear

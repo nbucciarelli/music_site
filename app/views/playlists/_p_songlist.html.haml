@@ -1,0 +1,13 @@
+%li{ :id => "song_#{ song.id }"}
+  Name:
+  = link_to "#{song.name}", song_path(song)
+  %br
+  = "Genre: #{song.genre}"
+  %br
+  = "Description: #{song.description}"
+  %br
+  Upvoted:
+  = song.upvote_count.to_i
+  %br
+  Downvoted:
+  = song.downvote_count.to_i

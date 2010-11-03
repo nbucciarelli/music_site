@@ -1,0 +1,12 @@
+#playlists
+  %h3
+    Playlists
+  %p
+    = link_to("Create a Playlist", new_playlist_path)
+    - unless @playlists.empty?
+      %ul.playlist_list
+        = render :partial => 'playlist', :collection => @playlists
+    - else
+      %p
+        %em
+          No playlists.
