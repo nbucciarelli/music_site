@@ -4,7 +4,7 @@ class CreatePlaylists < ActiveRecord::Migration
       t.string :playlist_title
       t.text :playlist_description
       t.integer :user_id
-      t.integer :song_ids
+      t.text :song_ids
 
       t.timestamps
     end

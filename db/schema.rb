@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20101103184049) do
     t.string   "playlist_title"
     t.text     "playlist_description"
     t.integer  "user_id"
-    t.integer  "song_ids"
+    t.text     "song_ids"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
