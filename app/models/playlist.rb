@@ -12,7 +12,7 @@ class Playlist < ActiveRecord::Base
     self.song_ids = ['']
   end
   
-  def songs_in(playlist)
+  def self.songs_in(playlist)
     songs = []
     if playlist.song_ids
       playlist.song_ids.each do |playlist_song|

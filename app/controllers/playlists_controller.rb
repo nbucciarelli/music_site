@@ -10,6 +10,7 @@ class PlaylistsController < ApplicationController
   
   def show
     respond_with @playlist
+    @songs = Playlist.songs_in(@playlist)
   end
   
   def new
