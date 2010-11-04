@@ -1,6 +1,7 @@
 #p_edit_s_container
   %ul.p_songlist
-    = render :partial => 'songs_edit', :collection => @songs
+    - @songs.each do |song|
+      = render :partial => 'songs_edit', :locals => {:song => song}
 
 #p_form_container
   = render :partial => 'form'
