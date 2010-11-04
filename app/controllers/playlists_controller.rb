@@ -3,16 +3,14 @@ class PlaylistsController < ApplicationController
   respond_to :html, :json
   
   before_filter :find_playlist, :except => ['index', 'new', 'create']
+  before_filter :find_songs, :except => ['index', 'new', 'create']
   
   def index
     @playlists = current_user.playlists
   end
   
   def show
-    @songs = Playlist.songs_in(@playlist)
-    puts @songs
     respond_with @playlist
-
   end
   
   def new
@@ -49,6 +47,10 @@ class PlaylistsController < ApplicationController
   
   def find_playlist
     @playlist = Playlist.find(params[:id])
+  end
+  
+  def find_songs
+    @songs = Playlist.songs_in(@playlist)
   end
   
 end

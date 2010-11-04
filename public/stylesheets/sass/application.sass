@@ -178,11 +178,6 @@ ul.playlist_list
   padding: 2px
   position: relative
   
-#p_l_container
-  border: 1px solid #000
-  margin-bottom: 10px
-  padding: 2px
-  
 #p_form_container
   border: 1px solid #000
   margin: 0px
@@ -203,10 +198,21 @@ ul.p_songlist
   font-family: helvetica
   font-size: large
   letter-spacing: 3px
-  
+  a
+    text-decoration: none
+    &:hover
+      color: #666
+
 #p_songinfo_container
   margin-left: 20px
 
 #p_songinfo
   font-family: arial
   font-size: small
+  
+/* STYLES FOR PLAYLIST EDITING */
+
+#p_edit_s_container
+  border: 1px solid #000
+  margin: 0 0 10px 0
+  padding: 0px

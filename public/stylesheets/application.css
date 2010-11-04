@@ -208,11 +208,6 @@ ul.playlist_list {
   padding: 2px;
   position: relative; }
 
-#p_l_container {
-  border: 1px solid black;
-  margin-bottom: 10px;
-  padding: 2px; }
-
 #p_form_container {
   border: 1px solid black;
   margin: 0px; }
@@ -231,6 +226,10 @@ ul.p_songlist {
   font-family: helvetica;
   font-size: large;
   letter-spacing: 3px; }
+  #p_songname a {
+    text-decoration: none; }
+    #p_songname a:hover {
+      color: #666666; }
 
 #p_songinfo_container {
   margin-left: 20px; }
@@ -238,3 +237,9 @@ ul.p_songlist {
 #p_songinfo {
   font-family: arial;
   font-size: small; }
+
+/* STYLES FOR PLAYLIST EDITING */
+#p_edit_s_container {
+  border: 1px solid black;
+  margin: 0 0 10px 0;
+  padding: 0px; }
