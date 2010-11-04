@@ -1,7 +1,11 @@
-%li{ :id => "song_#{ song.id }"}
-  Name:
-  = "#{song.name}"
-  %br
-  = "Genre: #{song.genre}"
-  %br
-  = "Description: #{song.description}"
+#p_song_container
+  %li
+    %span#p_songname
+      = "#{song.name}"
+    %br
+    #p_songinfo_container
+      %span#p_songinfo
+        = "Genre: #{song.genre}"
+      %br
+      %span#p_songinfo
+        = "Description: #{song.description}"

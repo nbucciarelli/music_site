@@ -1,7 +1,7 @@
-%h3
+%h3.p_title
   = "#{@playlist.playlist_title}"
 
-%ul.porkpie
+%ul.p_songlist
   = render :partial => 'song', :collection => @songs
   
 = link_to("Edit this playlist", edit_playlist_path)

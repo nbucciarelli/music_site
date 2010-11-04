@@ -195,6 +195,10 @@ ul.songlist {
   float: right; }
 
 /* STYLES FOR PLAYLIST LIST */
+h3.p_title {
+  font-family: helvetica;
+  letter-spacing: 2px; }
+
 ul.playlist_list {
   list-style: none; }
 
@@ -212,3 +216,25 @@ ul.playlist_list {
 #p_form_container {
   border: 1px solid black;
   margin: 0px; }
+
+ul.p_songlist {
+  list-style: none; }
+
+#p_song_container {
+  border-top: 2px dotted #cccccc;
+  margin: 5px;
+  padding: 2px;
+  position: relative; }
+
+/* STYLES FOR SONG BOX IN PLAYLIST */
+#p_songname {
+  font-family: helvetica;
+  font-size: large;
+  letter-spacing: 3px; }
+
+#p_songinfo_container {
+  margin-left: 20px; }
+
+#p_songinfo {
+  font-family: arial;
+  font-size: small; }
