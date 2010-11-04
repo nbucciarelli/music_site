@@ -213,7 +213,8 @@ ul.playlist_list {
   margin: 0px; }
 
 ul.p_songlist {
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
 
 #p_song_container {
   border-top: 2px dotted #cccccc;
