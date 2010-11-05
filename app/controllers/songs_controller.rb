@@ -7,6 +7,7 @@ class SongsController < ApplicationController
   
   def index
     @songs = current_user.songs
+    @playlists = current_user.playlists
     respond_with @songs
   end
   
@@ -73,4 +74,5 @@ private
   def find_song
     @song = Song.find(params[:id])
   end
+
 end

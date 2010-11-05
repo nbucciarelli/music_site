@@ -4,13 +4,13 @@
     %legend
       Information
     %p
-      = f.label :playlist_title
+      = f.label :title
       %br
-      = f.text_field :playlist_title, :value => @playlist.new_record? ? '' : @playlist.playlist_title
+      = f.text_field :title, :value => @playlist.new_record? ? '' : @playlist.title
     %p
-      = f.label :playlist_description
+      = f.label :description
       %br
-      = f.text_area :playlist_description, :rows => 6, :value => @playlist.new_record? ? '' : @playlist.playlist_description
+      = f.text_area :description, :rows => 6, :value => @playlist.new_record? ? '' : @playlist.description
   %p
     = f.submit
     or

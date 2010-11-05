@@ -1,8 +1,8 @@
 class CreatePlaylists < ActiveRecord::Migration
   def self.up
     create_table :playlists do |t|
-      t.string :playlist_title
-      t.text :playlist_description
+      t.string :title
+      t.text :description
       t.integer :user_id
       t.text :song_ids
 

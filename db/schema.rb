@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(:version => 20101103184049) do
 
   create_table "playlists", :force => true do |t|
-    t.string   "playlist_title"
-    t.text     "playlist_description"
+    t.string   "title"
+    t.text     "description"
     t.integer  "user_id"
     t.text     "song_ids"
     t.datetime "created_at"
