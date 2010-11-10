@@ -4,6 +4,12 @@ class Playlist < ActiveRecord::Base
   
   serialize :song_ids
   
+  before_create :set_playlist_defaults
+
+  def set_playlist_defaults
+    self.song_ids = ''
+  end
+  
   def self.songs_in(playlist)
     songs = []
     puts playlist.inspect

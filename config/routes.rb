@@ -6,9 +6,11 @@ MusicSite::Application.routes.draw do
   resources :songs do
     member do
       post :user_upvote
-      post :user_downvote
+      post :user_downvote      
     end
   end
+  
+  match 'songs/:id/add_song_to_playlist/:playlist_id', :to => 'songs#add_song_to_playlist', :as => 'add_song_to_playlist', :via => 'post'
   
   resources :playlists
   

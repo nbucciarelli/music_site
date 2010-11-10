@@ -18,7 +18,8 @@
   %select
     = @playlists.each do |playlist|
       %option{ :value => playlist.id}= playlist.title
-  %input{ :type => 'button', :value => 'Add to playlist'}
+  = link_to 'Add to playlist', add_song_to_playlist_path(song, 2), :method => 'add_song_to_playlist'
+  %br
   Upvoted:
   = song.upvote_count.to_i
   %br
