@@ -43,6 +43,16 @@ class PlaylistsController < ApplicationController
     end
   end
   
+  def remove_song_from_playlist
+    song = Song.find(params[:song_id])
+    if @playlist.song_ids.include?(song.id)
+      @playlist.song_ids.delete(song.id)
+      @playlist.save!
+      flash[:notice] = "Successfully removed '#{song.name}' from '#{@playlist.title}' playlist."
+      respond_with @playlist, :location => playlist_path(@playlist)
+    end
+  end
+  
   private
   
   def find_playlist

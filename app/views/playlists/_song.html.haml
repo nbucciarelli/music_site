@@ -9,3 +9,6 @@
       %br
       %span#p_songinfo
         = "Description: #{song.description}"
+      %br
+      = link_to 'Remove this song from the playlist', remove_song_from_playlist_path(@playlist, song), :method => 'remove_song_from_playlist'
+      

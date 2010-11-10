@@ -11,6 +11,7 @@ MusicSite::Application.routes.draw do
   end
   
   match 'songs/:id/add_song_to_playlist/:playlist_id', :to => 'songs#add_song_to_playlist', :as => 'add_song_to_playlist', :via => 'post'
+  match 'playlists/:id/remove_song_from_playlist/:song_id', :to => 'playlists#remove_song_from_playlist', :as => 'remove_song_from_playlist', :via => 'post'
   
   resources :playlists
   

@@ -7,7 +7,7 @@ class Playlist < ActiveRecord::Base
   before_create :set_playlist_defaults
 
   def set_playlist_defaults
-    self.song_ids = ''
+    self.song_ids = ['']
   end
   
   def self.songs_in(playlist)
@@ -15,7 +15,9 @@ class Playlist < ActiveRecord::Base
     puts playlist.inspect
     if playlist.song_ids
       playlist.song_ids.each do |playlist_song|
-        songs << Song.find(playlist_song)
+        unless playlist_song == ''
+          songs << Song.find(playlist_song)
+        end
       end
     end
     songs
