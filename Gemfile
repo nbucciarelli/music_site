@@ -9,3 +9,4 @@ gem 'faker', '~> 0.3.1'
 
 gem 'devise', '1.1.2'
 gem 'will_paginate', '>=3.0.pre'
+gem 'jquery-rails', '~>0.2'
