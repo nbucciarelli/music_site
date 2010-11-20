@@ -15,10 +15,8 @@
   = "/"
   = link_to 'Delete', song_path(song), :method => 'delete', :confirm => "Are you sure you want to delete #{song.name}"
   %br
-  %select
-    = @playlists.each do |playlist|
-      %option{ :value => playlist.id}= playlist.title
-    = link_to 'Add to playlist', add_song_to_playlist_path(song, playlist.id), :method => 'add_song_to_playlist'
+  start of box
+  = render :partial => 'playlist_select', :locals => {:song => song}
   %br
   Upvoted:
   = song.upvote_count.to_i

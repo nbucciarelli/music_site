@@ -71,12 +71,12 @@ class SongsController < ApplicationController
   end
   
   def add_song_to_playlist
-    if (playlist = Playlist.find(params[:playlist_id]))
+    if (playlist = Playlist.find(params[:playlist][:id]))
       playlist.song_ids << @song.id
       flash[:notice] = "Successfully added '#{@song.name}' to '#{playlist.title}' playlist"
       playlist.save!
     end
-    respond_with @song, :location => songs_path
+    respond_with playlist, :location => playlist_path(playlist)
   end
   
 private
