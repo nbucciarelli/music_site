@@ -5,6 +5,8 @@ class Playlist < ActiveRecord::Base
   serialize :song_ids
   
   before_create :set_playlist_defaults
+  
+  validates_uniqueness_of :song_ids
 
   def set_playlist_defaults
     self.song_ids = ['']
@@ -21,6 +23,17 @@ class Playlist < ActiveRecord::Base
       end
     end
     songs
+  end
+  
+  def uplist(song)
+    songlist = self.song_ids
+    a = songlist.index song
+    b = a - 1
+    songlist[a], songlist[b] = songlist [b], songlist[a]
+  end
+  
+  def self.downlist(song)
+    
   end
   
 end

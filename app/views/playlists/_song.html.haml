@@ -11,4 +11,6 @@
         = "Description: #{song.description}"
       %br
       = link_to 'Remove this song from the playlist', remove_song_from_playlist_path(@playlist, song), :method => 'remove_song_from_playlist'
+      %br
+      = link_to 'Move song up playlist', move_song_up_playlist_path(@playlist, song), :method => 'move_song_up_playlist'
       

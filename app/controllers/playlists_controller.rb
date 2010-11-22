@@ -53,6 +53,16 @@ class PlaylistsController < ApplicationController
     end
   end
   
+  def move_song_up_playlist
+    song = Song.find(params[:song_id])
+    if @playlist.song_ids.include?(song.id)
+      @playlist.uplist(song.id)
+      @playlist.save!
+      flash[:notice] = "Successfully moved '#{song.name}' up the playlist"
+      respond_with @playlist, :location => playlist_path(@playlist)      
+    end
+  end
+  
   private
   
   def find_playlist
