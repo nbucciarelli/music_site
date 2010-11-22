@@ -32,8 +32,11 @@ class Playlist < ActiveRecord::Base
     songlist[a], songlist[b] = songlist [b], songlist[a]
   end
   
-  def self.downlist(song)
-    
+  def downlist(song)
+    songlist = self.song_ids
+    a = songlist.index song
+    b = a + 1
+    songlist[a], songlist[b] = songlist [b], songlist[a]
   end
   
 end

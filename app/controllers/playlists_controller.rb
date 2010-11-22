@@ -63,6 +63,16 @@ class PlaylistsController < ApplicationController
     end
   end
   
+  def move_song_down_playlist
+    song = Song.find(params[:song_id])
+    if @playlist.song_ids.include?(song.id)
+      @playlist.downlist(song.id)
+      @playlist.save!
+      flash[:notice] = "Successfully moved '#{song.name}' down the playlist"
+      respond_with @playlist, :location => playlist_path(@playlist)
+    end
+  end
+  
   private
   
   def find_playlist
