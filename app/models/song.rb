@@ -8,6 +8,14 @@ class Song < ActiveRecord::Base
   serialize :users_upvoted
   serialize :users_downvoted
 
+  validate :validate_youtube_or_mp3
+
+  def validate_youtube_or_mp3
+    unless self.link.include?('youtube') || self.link.include?('.mp3')
+      errors.add(:song, 'must be a youtube or mp3 link.')
+    end
+  end
+
   def set_vote_defaults
     self.users_upvoted = ['']
     self.users_downvoted = ['']

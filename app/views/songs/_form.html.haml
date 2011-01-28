@@ -6,11 +6,18 @@
     %p
       = f.label :name
       %br
-      = f.text_field :name, :value => @song.new_record? ? '' : @song.name
+      = f.text_field :name
+    %p
+      = f.label :link
+      %br
+      = f.text_field :link      
+      %br
+      %em
+        Make sure the link is a valid youtube or mp3 link. 
     %p
       = f.label :description
       %br
-      = f.text_area :description, :value => @song.new_record? ? '' : @song.description
+      = f.text_area :description
     %p
       = f.label :genre
       %br

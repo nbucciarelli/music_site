@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101103184049) do
+ActiveRecord::Schema.define(:version => 20110128184226) do
 
   create_table "playlists", :force => true do |t|
     t.string   "title"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20101103184049) do
     t.string   "genre"
     t.text     "users_upvoted"
     t.text     "users_downvoted"
+    t.string   "link"
   end
 
   create_table "users", :force => true do |t|
