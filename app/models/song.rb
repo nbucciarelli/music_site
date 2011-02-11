@@ -1,14 +1,16 @@
 class Song < ActiveRecord::Base
   belongs_to :user
-  
+
   before_create :set_vote_defaults
-  
+
   GENRES = ["Rock", "Rap", "Punk", "Disco", "Hip Hop"]
-  
+
   serialize :users_upvoted
   serialize :users_downvoted
 
   validate :validate_youtube_or_mp3
+
+  scope :new_songs, where("created_at > '#{5.days.ago}'")
 
   def validate_youtube_or_mp3
     unless self.link.include?('youtube') || self.link.include?('.mp3')
@@ -22,7 +24,7 @@ class Song < ActiveRecord::Base
     self.downvote_count = 0
     self.upvote_count = 0
   end
-  
+
   def upvote(user)
     unless self.users_upvoted.include?(user.id) || self.users_downvoted.include?(user.id)
       self.users_upvoted << user.id
@@ -31,9 +33,9 @@ class Song < ActiveRecord::Base
     else
       false
     end
-    
+
   end
-  
+
   def downvote(user)
     unless self.users_upvoted.include?(user.id) || self.users_downvoted.include?(user.id)
       self.users_downvoted << user.id
