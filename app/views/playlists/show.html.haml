@@ -3,5 +3,12 @@
 
 %ul.p_songlist
   = render :partial => 'song', :collection => @songs
-  
+
+  - @playlist.song_ids.each do |song_id|
+    - if Song.exists?(song_id)
+      - song = Song.find(song_id)
+      %a{ :href => song.link }
+        = song.name
+      %br
+
 = link_to("Edit this playlist", edit_playlist_path)

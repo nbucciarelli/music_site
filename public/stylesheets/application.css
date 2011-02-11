@@ -244,3 +244,9 @@ ul.p_songlist {
   border: 1px solid black;
   margin: 0 0 10px 0;
   padding: 0px; }
+
+.black_square {
+  background: gray; }
+
+.white_square {
+  background: white; }
