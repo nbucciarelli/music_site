@@ -72,6 +72,12 @@ body {
           background: url(../images/text_box.gif) no-repeat center;
           background-position: 0px 0px; }
     body #main_container #footer {
+      width: 821px;
       height: 50px;
       clear: both;
-      color: #837d7b; }
+      color: #837d7b;
+      padding: 20px 0 0 0; }
+    body #main_container #footer a {
+      color: #837d7b;
+      padding: 0 8px 0 8px;
+      text-decoration: none; }
