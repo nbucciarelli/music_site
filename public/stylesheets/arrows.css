@@ -22,11 +22,11 @@
   padding: 0px; }
 
 .ab {
-  margin-left: auto;
   margin-top: 5px;
   width: 28px;
   height: 30px;
-  padding: 0px; }
+  padding: 0px;
+  border: 1px solid black; }
 
 .ab:hover .point.down, .ab:hover .point.up {
   border-color: red transparent; }
@@ -36,4 +36,13 @@
 .arrows {
   padding: 0px;
   margin: 0px;
-  margin-left: 10px; }
+  margin-left: 10px;
+  border: 1px solid black; }
+
+ul.arrowlistfuck {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+  ul.arrowlistfuck li.inline {
+    display: inline;
+    border: 1px solid black; }
