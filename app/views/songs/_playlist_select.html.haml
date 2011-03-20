@@ -2,12 +2,5 @@
 = form_tag add_song_to_playlist_path(song), :method => :add_song_to_playlist do
   %p
     = collection_select(:playlist, :id, @playlists, :id, :title)
-  %p
+    |
     = submit_tag(value = "Add song to playlist")
-
-
-
--#%select
--#  = @playlists.each do |playlist|
--#    %option{ :value => playlist.id}= playlist.title
--#  = link_to 'Add to playlist', add_song_to_playlist_path(song, playlist.id), :method => 'add_song_to_playlist'
