@@ -43,6 +43,11 @@ class PlaylistsController < ApplicationController
     end
   end
   
+  def destroy
+    flash[:notice] = 'Successfully deleted playlist.' if @playlist.delete
+    respond_with @playlist
+  end
+  
   def remove_song_from_playlist
     song = Song.find(params[:song_id])
     if @playlist.song_ids.include?(song.id)
