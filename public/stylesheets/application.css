@@ -4,6 +4,7 @@ body {
   margin: 0px auto auto auto;
   width: 821px; }
   body #main_container {
+    width: 821px;
     height: auto;
     margin: auto;
     padding: 0px; }
@@ -43,18 +44,34 @@ body {
       background: url(../images/menu_bullet.gif) no-repeat bottom center; }
     body #main_container #nav ul li a:hover {
       background: url(../images/menu_bullet.gif) no-repeat bottom center; }
-    body #main_container #content {
+    body #main_container #center_content {
+      width: 821px;
       height: auto;
       clear: both;
       padding: 25px 0 30px 0;
       background-color: #e9e5e2; }
+      body #main_container #center_content #main {
+        width: 500px;
+        float: left;
+        padding: 10px 0 10px 10px;
+        background-color: #e9e5e2; }
+        body #main_container #center_content #main #main_content {
+          width: 496px;
+          height: auto;
+          background: url(images/welcome_box.gif) no-repeat center;
+          padding: 0px; }
+      body #main_container #center_content #sidebar {
+        width: 300px;
+        float: left;
+        padding: 10px 0 10px 0px;
+        background-color: #e9e5e2; }
+        body #main_container #center_content #sidebar #user_box {
+          width: 278px;
+          height: 144px;
+          padding: 15px 0 0 10px;
+          background: url(../images/text_box.gif) no-repeat center;
+          background-position: 0px 0px; }
     body #main_container #footer {
       height: 50px;
       clear: both;
       color: #837d7b; }
-    body #main_container #user_box {
-      width: 278px;
-      height: 144px;
-      padding: 15px 0 0 10px;
-      background: url(../images/text_box.gif) no-repeat center;
-      background-position: 0px 0px; }

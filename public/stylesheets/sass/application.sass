@@ -22,9 +22,11 @@ body
   @include container
 
   #main_container
+    width: 821px
     height: auto
     margin: auto
     padding: 0px
+
 
     #header
       height: 135px
@@ -69,22 +71,39 @@ body
     #nav ul li a:hover
       background: url(../images/menu_bullet.gif) no-repeat bottom center
 
-    #content
+
+    #center_content
+      width: 821px
       height: auto
       clear: both
       padding: 25px 0 30px 0
       background-color: #e9e5e2
 
+      #main
+        width: 500px
+        float: left
+        padding: 10px 0 10px 10px
+        background-color: #e9e5e2
+        #main_content
+          width: 496px
+          height: auto
+          background: url(images/welcome_box.gif) no-repeat center
+          padding: 0px
+
+      #sidebar
+        width: 300px
+        float: left
+        padding: 10px 0 10px 0px
+        background-color: #e9e5e2
+
+        #user_box
+          width: 278px
+          height: 144px
+          padding: 15px 0 0 10px
+          background: url(../images/text_box.gif) no-repeat center
+          background-position: 0px 0px
+
     #footer
       height: 50px
       clear: both
       color: #837d7b
-
-    #user_box
-      width: 278px
-      height: 144px
-      padding: 15px 0 0 10px
-      background: url(../images/text_box.gif) no-repeat center
-      background-position: 0px 0px
-
-

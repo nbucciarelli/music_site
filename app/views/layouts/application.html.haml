@@ -14,11 +14,15 @@
         = render :partial => 'shared/header'
       #nav
         = render :partial => 'shared/nav'
-      #content
+
+      #center_content
         #main
-          = yield
-        #user_box
-          = render :partial => 'shared/user_box'
+          #main_content
+            = yield
+        #sidebar
+          #user_box
+            = render :partial => 'shared/user_box'
+
       #footer
         / = render :partial => 'shared/sidebar'
         = render :partial => 'shared/footer'
