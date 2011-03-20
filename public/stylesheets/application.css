@@ -1,28 +1,60 @@
 body {
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-  background: gray; }
-  body #nav {
-    background: white; }
-    body #nav li {
-      display: inline;
-      list-style: none; }
-  body #content {
-    display: inline;
-    float: left;
-    position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 460px;
-    background: white; }
-  body #sidebar {
-    display: inline;
-    float: left;
-    position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 300px;
-    background: white; }
-  body #footer {
-    background: white; }
+  background: url(../images/bg.gif) repeat black;
+  padding: 0;
+  margin: 0px auto auto auto;
+  width: 821px; }
+  body #main_container {
+    height: auto;
+    margin: auto;
+    padding: 0px; }
+    body #main_container #header {
+      height: 135px;
+      margin: 0px;
+      padding: 0px;
+      background: url(../images/header_bg.gif) no-repeat center top; }
+    body #main_container #nav {
+      height: 42px;
+      margin: 0px;
+      background: url(../images/menu_bg.gif) no-repeat left; }
+    body #main_container #nav ul {
+      list-style: none;
+      padding: 0 0 0 15px;
+      margin: 0px; }
+    body #main_container #nav ul li {
+      display: inline; }
+    body #main_container #nav ul li a {
+      float: left;
+      height: 42px;
+      border: none;
+      padding: 0 15px 0 15px;
+      text-decoration: none;
+      color: white;
+      line-height: 42px;
+      font-size: 14px; }
+    body #main_container #nav ul li.selected a {
+      float: left;
+      height: 42px;
+      border: none;
+      padding: 0 15px 0 15px;
+      text-decoration: none;
+      color: white;
+      line-height: 42px;
+      font-size: 14px;
+      background: url(../images/menu_bullet.gif) no-repeat bottom center; }
+    body #main_container #nav ul li a:hover {
+      background: url(../images/menu_bullet.gif) no-repeat bottom center; }
+    body #main_container #content {
+      height: auto;
+      clear: both;
+      padding: 25px 0 30px 0;
+      background-color: #e9e5e2; }
+    body #main_container #footer {
+      height: 50px;
+      clear: both;
+      color: #837d7b; }
+    body #main_container #user_box {
+      width: 278px;
+      height: 144px;
+      padding: 15px 0 0 10px;
+      background: url(../images/text_box.gif) no-repeat center;
+      background-position: 0px 0px; }
