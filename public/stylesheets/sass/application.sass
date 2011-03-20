@@ -1,7 +1,8 @@
 @mixin container
-  margin-left: auto
-  margin-right: auto
-  width: 960px
+  background: url(../images/bg.gif) repeat #000000
+  padding: 0
+  margin: 0px auto auto auto
+  width: 821px
 
 @mixin grid($columns)
   display: inline
@@ -11,30 +12,79 @@
   padding-right: 10px
   width: (960 / 12 * $columns) - 20 + px
 
+@mixin box_border
+  -moz-border-radius: 4px 4px 4px 4px
+  -moz-box-shadow: 2px 2px 8px #BBBBBB, -2px 0 8px #BBBBBB
+  -webkit-border-radius: 4px 4px 4px 4px
+  -webkit-box-shadow: 2px 2px 8px #BBBBBB, -2px 0 8px #BBBBBB
 
 body
   @include container
-  background: gray
 
-  #header
+  #main_container
+    height: auto
+    margin: auto
+    padding: 0px
 
-  #nav
-    background: white
-    li
-      display: inline
+    #header
+      height: 135px
+      margin: 0px
+      padding: 0px
+      background: url(../images/header_bg.gif) no-repeat center top
+
+    #nav
+      height: 42px
+      margin: 0px
+      background: url(../images/menu_bg.gif) no-repeat left
+
+    #nav ul
       list-style: none
+      padding: 0 0 0 15px
+      margin: 0px
 
-  #content
-    @include grid(6)
-    background: white
+    #nav ul li
+      display: inline
 
-  #sidebar
-    @include grid(4)
-    background: white
+    #nav ul li a
+      float: left
+      height: 42px
+      border: none
+      padding: 0 15px 0 15px
+      text-decoration: none
+      color: #fff
+      line-height: 42px
+      font-size: 14px
 
+    #nav ul li.selected a
+      float: left
+      height: 42px
+      border: none
+      padding: 0 15px 0 15px
+      text-decoration: none
+      color: #fff
+      line-height: 42px
+      font-size: 14px
+      background: url(../images/menu_bullet.gif) no-repeat bottom center
 
-  #footer
-    background: white
+    #nav ul li a:hover
+      background: url(../images/menu_bullet.gif) no-repeat bottom center
 
+    #content
+      height: auto
+      clear: both
+      padding: 25px 0 30px 0
+      background-color: #e9e5e2
+
+    #footer
+      height: 50px
+      clear: both
+      color: #837d7b
+
+    #user_box
+      width: 278px
+      height: 144px
+      padding: 15px 0 0 10px
+      background: url(../images/text_box.gif) no-repeat center
+      background-position: 0px 0px
 
 

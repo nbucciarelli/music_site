@@ -1,15 +1,14 @@
-#user_box
-  %ul
-    - if user_signed_in?
-      %li
-        = "Logged in as #{ current_user.username }" 
-      %li
-        %a{ :href => edit_user_registration_path } My Account
-      %li
-        %a{ :href => destroy_user_session_path } Log-out
-      %li
-        %a{ :href => '#' } Help
-    - else
-      %li
-        %a{ :href => '#' } Login
+%ul
+  - if user_signed_in?
+    %li
+      = "Logged in as #{ current_user.username }"
+    %li
+      %a{ :href => edit_user_registration_path } My Account
+    %li
+      %a{ :href => destroy_user_session_path } Log-out
+    %li
+      %a{ :href => '#' } Help
+  - else
+    %li
+      %a{ :href => '#' } Login
 
