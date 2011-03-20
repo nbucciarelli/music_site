@@ -12,25 +12,41 @@
     #header
       = render :partial => 'shared/header'
     .clear
-    - if user_signed_in?
-      #nav
-        = render :partial => 'shared/nav'
-    #flash
-      #flash_inner
-        .notice
-          = notice
-        .alert
-          = alert
+    #nav
+      = render :partial => 'shared/nav'
     .clear
     #content
-      #main
-        #main_inner
-          = yield
-        #footer
-          = render :partial => 'shared/footer'
+      = yield
+    #sidebar
+      = render :partial => 'shared/sidebar'
+    .clear
 
-      - if user_signed_in?
-        #sidebar
-          #sidebar_inner
-            = render :partial => 'shared/sidebar'
-        .clear
+    #footer
+      = render :partial => 'shared/footer'
+    .clear
+
+
+
+
+    / - if user_signed_in?
+    /   #nav
+    /     = render :partial => 'shared/nav'
+    / #flash
+    /   #flash_inner
+    /     .notice
+    /       = notice
+    /     .alert
+    /       = alert
+    / .clear
+    / #content
+    /   #main
+    /     #main_inner
+    /       = yield
+    /     #footer
+    /       = render :partial => 'shared/footer'
+    /
+    /   - if user_signed_in?
+    /     #sidebar
+    /       #sidebar_inner
+    /         = render :partial => 'shared/sidebar'
+    /     .clear

@@ -11,214 +11,30 @@
   padding-right: 10px
   width: (960 / 12 * $columns) - 20 + px
 
-@mixin inline_nav
-  ul
-    margin: 2px 0
-    padding: 0 18px
-    li
-      margin: 0 4px
-      display: inline
-
-@mixin vertical_nav
-  ul
-    margin: 2px 0
-    padding: 0
-    list-style: none
-    li
-      margin: 0
-      padding: 4px 0
 
 body
-  font-size: .9em
-
-@mixin show_grid($color)
-  border: solid 1px $color
-  border-width: 1px 0 1px 0
-  border: 0
-
-.clear
-  clear: both
-  display: block
-  overflow: hidden
-  visibility: hidden
-  width: 0
-  height: 0
-
-#header
   @include container
-  @include show_grid(#ff0000)
-  position: relative
-  margin-bottom: 4px
-  #logo
-    @include grid(12)
-    @include show_grid(red)
+  background: gray
 
-#nav
-  @include container
-  @include inline_nav
-  position: relative
-  @include show_grid(#ff0000)
-  border-top: solid 1px #999
-  border-bottom: solid 1px #999
-  background-color: #eee
-  margin-top: 0
-  margin-bottom: 4px
-  padding-top: 8px
-  padding-bottom: 4px
-  font-size: .95em
-  font-weight: bold
-  a
-    text-decoration: none
+  #header
 
-#user_box
-  @include container
-  @include grid(12)
-  @include inline_nav
-  @include show_grid(#ff0000)
-  position: relative
-  top: 0
-  margin-top: 4px
-  margin-bottom: 2px
-  padding-top: 4px
-  padding-bottom: 4px
-  font-size: .95em
-  font-weight: bold
-  text-align: right
-  float: right
-  padding-left: 0
-  padding-right: 0
+  #nav
+    background: white
+    li
+      display: inline
+      list-style: none
 
-#flash
-  @include container
-  #flash_inner
-    text-align: center
-    padding: 8px 18px
+  #content
+    @include grid(6)
+    background: white
 
-#content
-  @include container
-  #main
-    @include grid(8)
-    @include show_grid(#ff0000)
-    margin-bottom: 30px
-    #main_inner
-      min-height: 360px
-      padding: 0 16px
   #sidebar
     @include grid(4)
-    @include show_grid(#ff0000)
-    @include vertical_nav
-    a
-      text-decoration: none
-    #sidebar_inner
-      min-height: 180px
-      border-left: solid 1px #999
-      padding-left: 14px
+    background: white
 
-#footer
-  @include container
-  @include inline_nav
-  @include show_grid(#ff0000)
-  text-align: left
-  padding-top: 6px
-  border-top: solid 1px #999
 
-a
-  color: #333
+  #footer
+    background: white
 
-a img
-  border: none
 
-a.cancel_link
-  color: #ff0000
 
-fieldset
-  border: solid 1px #eee
-  margin-bottom: 12px
-
-legend
-  font-weight: bold
-  padding: 0 8px
-
-/* STYLES FOR SONG BOX */
-
-ul.songlist
-  list-style: none
-
-#song_container
-  border: 1px solid #000
-  margin: 5px
-  padding: 2px
-
-#voting
-  border: 1px solid #000
-  margin: 0
-  position: relative
-  float: left
-  width: 50px
-  height: 50px
-
-#song_info
-  border: 1px solid #000
-  width: 475px
-  position: relative
-  float: right
-
-/* STYLES FOR PLAYLIST LIST */
-
-h3.p_title
-  font-family: helvetica
-  letter-spacing: 2px
-
-ul.playlist_list
-  list-style: none
-
-#playlist_container
-  border-top: 2px dotted #ccc
-  margin: 5px
-  padding: 2px
-  position: relative
-
-#p_form_container
-  border: 1px solid #000
-  margin: 0px
-  padding 2px
-
-ul.p_songlist
-  list-style: none
-  padding: 0
-
-#p_song_container
-  border-top: 2px dotted #ccc
-  margin: 5px
-  padding: 2px
-  position: relative
-
-/* STYLES FOR SONG BOX IN PLAYLIST */
-
-#p_songname
-  font-family: helvetica
-  font-size: large
-  letter-spacing: 3px
-  a
-    text-decoration: none
-    &:hover
-      color: #666
-
-#p_songinfo_container
-  margin-left: 20px
-
-#p_songinfo
-  font-family: arial
-  font-size: small
-
-/* STYLES FOR PLAYLIST EDITING */
-
-#p_edit_s_container
-  border: 1px solid #000
-  margin: 0 0 10px 0
-  padding: 0px
-
-.black_square
-  background: gray
-.white_square
-  background: white
