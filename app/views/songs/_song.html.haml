@@ -4,8 +4,8 @@
       .ab
         .point.up
         .back.up
-    %li
-      = link_to 'Vote Up', user_upvote_song_path(song), :method => :post
+      %span
+        = link_to 'Vote Up', user_upvote_song_path(song), :method => :post
     %li
       .ab
         .back.down
@@ -32,4 +32,3 @@
   %br
   Downvoted:
   = song.downvote_count.to_i
-  

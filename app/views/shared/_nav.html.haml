@@ -1,14 +1,15 @@
 %ul
-  %li
-    %a{:href => root_path} Dashboard
+  %li.selected
+    %a{:href => root_path} Home
   %li
     %a{:href => '#'} Hot
   %li
     %a{:href => new_songs_songs_path} New
-  %li
-    %a{:href => new_song_path} Submit
-  %li
-    %a{:href => playlists_path} Playlists
+  - if user_signed_in?
+    %li
+      %a{:href => new_song_path} Submit
+    %li
+      %a{:href => playlists_path} Playlists
   %li
     %a{:href => songs_path} Song Index
   %li
